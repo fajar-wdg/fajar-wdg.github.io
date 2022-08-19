@@ -8,97 +8,15 @@
   <title>Document</title>
   <link rel="stylesheet" href="./stayle/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    body {
-      background-color: grey;
-      /* opacity: 10px; */
-    }
-
-    section {
-      /* background-image: url(https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2019/05/17/694355706.png); */
-      background-image: url(./img/Untitled-1.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-    }
-
-    .navbar {
-      position: fixed;
-      top: 0%;
-      width: 100%;
-      /* right: 0px; */
-      /* transform: translateY(-50%); */
-      margin-bottom: 150px;
-    }
-
-    .social {
-      position: fixed;
-      top: 50%;
-      right: 0px;
-      transform: translateY(-50%);
-    }
-
-    .social a:hover {
-      background-color: black;
-      transition: all ease 0.5s;
-    }
-
-    .social a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50px;
-      height: 50px;
-      margin: 0px;
-      padding: 0px;
-      line-height: 0px;
-      background-color: #FFFFFF;
-      border: 1px solid #CBCBCB;
-      box-shadow: 2px 2px 12px rgb(0 0 0 / 20%);
-      text-decoration: none;
-    }
-
-    footer {
-      height: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      background-color: #191919;
-      color: wheat;
-    }
-
-    footer .social-icons {
-      display: flex;
-    }
-
-    footer .social-icons a {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #e6e3e3;
-      margin: 20px 10px;
-      border-radius: 50%;
-    }
-
-    footer .social-icons a:hover {
-      background-color: #000000;
-      color: wheat;
-    }
-  </style>
 </head>
 
 <body>
 
 
   <div class="container-fluid p-0 m-0">
-    <section class="position-absolut" style="height: 95vh ;">
-      <div class="container text-center">
+    <section class="position-absolut" style="height: auto !important;">
+      <!--style="height: 95vh ;"-->
+      <div class="container ">
         <div class="row ">
           <div class="col">
           </div>
@@ -107,13 +25,25 @@
               developer and
               lover of
               traditional arts</p>
+            <button onclick="toggleElement()" class="btn btn-primary justify-content-start">Tentang Saya</button>
+            <div class="title text-light pt-2" id="tentang" style="display:none">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis tenetur aliquam vero accusamus
+                deleniti
+                libero explicabo minus alias nam dolorem repellat, omnis consequatur provident impedit eligendi
+                aspernatur
+                cumque praesentium! Modi excepturi praesentium voluptas distinctio, nemo architecto repellendus
+                voluptates ex
+                eius quo explicabo consectetur quidem sit eos dolorem quos voluptatibus ad.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="container text-center">
-      <div class="main justify-content-center shadow-sm p-3 mb-5 bg-body rounded">
+
+    <div class=" container text-center mt-5 pt-5">
+
+      <div class="main justify-content-center shadow-sm p-3 mb-5 bg-body rounded" style="margin-top: 150px ;">
         <div class="row ms-1">
           <div class="col">
             <div class="card" style="width: 18rem;">
@@ -121,7 +51,8 @@
                 alt="Pemrograman Java" style="height: 150px;">
               <div class="card-body">
                 <h5 class="card-title">Java</h5>
-                <p class="card-text">Belajar bahasa pemrograman java. Java adalah salah satu bahasa pemrograman cukup
+                <p class="card-text">Belajar bahasa pemrograman java. Java adalah salah satu bahasa pemrograman
+                  cukup
                   terkenal pada bidang IT.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
@@ -133,7 +64,8 @@
                 style="height: 150px ;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aliquam deleniti,
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aliquam
+                  deleniti,
                   fugit iusto reiciendis sit.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
@@ -145,7 +77,8 @@
                 class="card-img-top" alt="PHP" style=" height: 150px ;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                  the
                   card's content.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
@@ -161,7 +94,7 @@
 
     <nav class="navbar bg-dark ">
       <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1 text-light">Navbar</span>
+        <span class="navbar-brand mb-0 h1 text-light"><b>Fajar Firmansyah</b></span>
         <ul class="nav justify-content-end">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -187,7 +120,7 @@
       <p>Panduan Pembelajaran Bahasa Pemrograman dan disen Photoshop.</p>
       <!--social-->
       <div class="social-icons">
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -200,7 +133,7 @@
 
     <!-- COntoh -->
     <div class="social">
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
@@ -208,6 +141,17 @@
     </div>
   </div>
 
+  <script>
+    function toggleElement() {
+      var x = document.getElementById("tentang");
+      // document.getElementById("tentang").style.display = '';
+      if (x.style.display == "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
 
   <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
   <script src=" ./stayle/js/bootstrap.bundle.min.js">
