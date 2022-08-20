@@ -41,9 +41,42 @@
     </section>
 
 
-    <div class=" container text-center mt-5 pt-5">
+    <div class=" container text-center mt-5 pt-5 ">
 
-      <div class="main justify-content-center shadow-sm p-3 mb-5 bg-body rounded" style="margin-top: 150px ;">
+      <div class="chard text-start" style=" margin-top: 150px !important ;">
+        <div class="row">
+          <div class="col shadow-sm p-3  bg-body rounded me-2">
+            <div class="titel-chard mb-3">
+              <span>Bahasa Pemrograman</span>
+            </div>
+            <div class="chard-body">
+              <div class="progress w-75 mb-3">
+                <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 50%;"
+                  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Java 40%</div>
+              </div>
+              <div class="progress w-75 mb-3">
+                <div class="progress-bar bg-success" role="progressbar" aria-label="Example with label"
+                  style="width: 45%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Paython 30%</div>
+              </div>
+              <div class="progress w-75 mb-3">
+                <div class="progress-bar bg-warning" role="progressbar" aria-label="Example with label"
+                  style="width: 35%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Php 25%</div>
+              </div>
+            </div>
+          </div>
+          <div class="col shadow-sm p-3  bg-body rounded">
+            <div class="titel-chard">
+              <span>Status</span>
+            </div>
+            <div class="chard-body">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente nisi nesciunt, pariatur quia culpa
+                totam voluptatum veritatis commodi natus consequatur?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main justify-content-center shadow-sm p-3 mb-5 bg-body rounded" style="margin-top: 120px ;">
         <div class="row ms-1">
           <div class="col">
             <div class="card" style="width: 18rem;">
@@ -82,6 +115,40 @@
                   card's content.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container text-start mt-5">
+          <div class="row justify-content-center ">
+            <div class="col-md-7">
+              <div class="title-from text-center">
+                <h3>Komentar</h3>
+              </div>
+              <div class=" alert alert-primary alert-dismissible fade show " role="alert">
+                <strong>Terimakasi !</strong> Pesan anda sudah terkirim.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <form action="" method="post">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Nama">
+                </div>
+                <div class="mb-3 0">
+                  <label for="exampleFormControlInput1" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button class="btn btn-primary btn-kirim mb-5">Kirim</button>
+
+                <button class="btn btn-primary btn-loading  d-none " type="button" disabled>
+                  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                  Loading...
+                </button>
+              </form>
             </div>
           </div>
         </div>
