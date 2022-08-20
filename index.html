@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" href="./img/Fajar 3D.png">
+  <title>Portofolio</title>
   <link rel="stylesheet" href="./stayle/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -42,7 +43,6 @@
 
 
     <div class=" container text-center mt-5 pt-5 ">
-
       <div class="chard text-start" style=" margin-top: 150px !important ;">
         <div class="row">
           <div class="col shadow-sm p-3  bg-body rounded me-2">
@@ -119,30 +119,61 @@
           </div>
         </div>
 
+
+        <!-- Konten Program -->
+        <div class="container text-start mt-5">
+          <div class="row justify-content-end">
+            <div class="col-8">
+
+              <p class="float-end"> <img class="float-start me-3 mt-2" src="img/logo.jpg" alt=""
+                  style="width: 150px; height: 150px ;">Lorem ipsum dolor, sit amet
+                consectetur adipisicing elit. Earum assumenda maiores temporibus cupiditate
+                quos animi fugiat doloremque sint iste provident eos eveniet, ut accusantium saepe ipsum adipisci natus
+                quidem et. Maiores amet eum architecto, quod atque animi excepturi cum recusandae ut tempore porro ab
+                sint in tempora minus voluptas provident at iure doloremque? Magnam, iste incidunt? Ducimus quaerat
+                nihil placeat sed provident, asperiores blanditiis eligendi excepturi recusandae magni culpa eius,
+                nostrum nulla dicta doloribus repellendus vero quae. Beatae amet ab consequuntur alias sit architecto
+                enim iusto, reiciendis corrupti ipsam quis quasi dolor mollitia aspernatur esse error similique?
+                Quisquam, tempora praesentium.</p>
+            </div>
+            <div class="col-4 ">
+              <ul class="list list-group-numbered">
+                <li class="list-group-item"><a href="">Baha Pemrograman Java</a></li>
+                <li class="list-group-item"><a href="">Baha Pemrograman Java</a></li>
+                <li class="list-group-item"><a href="">Baha Pemrograman Java</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Akhir Konten Program -->
+
+
+
         <div class="container text-start mt-5">
           <div class="row justify-content-center ">
             <div class="col-md-7">
               <div class="title-from text-center">
                 <h3>Komentar</h3>
               </div>
-              <div class=" alert alert-primary alert-dismissible fade show " role="alert">
+              <div class=" pesan-alert alert alert-primary alert-dismissible fade show d-none" role="alert">
                 <strong>Terimakasi !</strong> Pesan anda sudah terkirim.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
-              <form action="" method="post">
+              <form action="" name="formPortofolio" method="post">
                 <div class="mb-3">
                   <label for="name" class="form-label">Nama</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Nama">
+                  <input name="nama" type="text" class="form-control" id="exampleFormControlInput2" placeholder="Nama">
                 </div>
                 <div class="mb-3 0">
                   <label for="exampleFormControlInput1" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  <input name="email" type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="name@example.com">
                 </div>
                 <div class="mb-3">
                   <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <textarea name="pesan" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-                <button class="btn btn-primary btn-kirim mb-5">Kirim</button>
+                <button class="btn btn-primary btn-kirim mb-5" type="submit">Kirim</button>
 
                 <button class="btn btn-primary btn-loading  d-none " type="button" disabled>
                   <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
@@ -153,7 +184,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <!-- Akhir Main -->
@@ -207,6 +237,37 @@
       <a href="https://www.youtube.com/channel/UCxXHq3xpgv6Uo1LA-oBITbg"><i class="fab fa-youtube"></i></a>
     </div>
   </div>
+
+
+  <script>
+    // Post
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwCT1LHVpwPuWW2WMZtIs3F1uWbZE6Kxn1eTNQy5dL6ZJHWHqnwI4ML5cAB_2N74Rf7pA/exec'
+    const form = document.forms['formPortofolio'];
+
+    const btnkirim = document.querySelector('.btn-kirim');
+    const btnloading = document.querySelector('.btn-loading');
+    const pesanalert = document.querySelector('.pesan-alert');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      // btn Loading ketika tombol kirim di klik maka muncul loading
+      btnloading.classList.toggle('d-none');
+      btnkirim.classList.toggle('d-none');
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          btnloading.classList.toggle('d-none');
+          btnkirim.classList.toggle('d-none');
+          pesanalert.classList.toggle('d-none');
+
+          form.reset();
+          console.log('Success!', response)
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+    // Akhor Post
+  </script>
+
 
   <script>
     function toggleElement() {
